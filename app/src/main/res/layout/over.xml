@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    tools:context="com.project.context.iparking.Over"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:gravity="center_horizontal">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:backgroundTint="@color/bar"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/over_tool"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="116dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="40dp">
+        <com.project.context.iparking.circleImageview.CircleImageView
+            android:layout_width="106dp"
+            android:layout_height="101dp"
+            android:id="@+id/circleImage"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/pay"
+            app:border_width="2dp"
+            app:border_color="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付成功！"
+            android:id="@+id/textView2"
+            android:textSize="30dp"
+            android:textColor="@color/bar"/>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="?android:attr/listDivider"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您已成功付款："
+            android:id="@+id/howmoney"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mon"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#ff0004" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:text="元" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车位租用金额："
+            android:id="@+id/textView6"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inmon"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#ff0004" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:text="元" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="超时罚款："
+            android:id="@+id/textView9"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/overmon"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#ff0004" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:text="元" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="完成"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:id="@+id/over_btn"
+        android:background="@color/bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

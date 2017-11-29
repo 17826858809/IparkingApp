@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    tools:context="com.project.context.iparking.TimeLength"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:backgroundTint="@color/bar"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/time_long_toorbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/times"
+        android:textSize="25sp"
+        android:paddingLeft="20dp"
+        android:paddingTop="80dp"
+        android:paddingRight="20dp"/>
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_long"
+        android:layout_gravity="center_horizontal"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:id="@+id/time_long_btn"
+        android:background="@color/bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

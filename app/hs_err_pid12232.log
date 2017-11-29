@@ -1,0 +1,71 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 368176 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:323), pid=12232, tid=1488
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_45-b18) (build 1.7.0_45-b18)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.45-b08 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000008e45800):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=1488, stack(0x000000000a3a0000,0x000000000a4a0000)]
+
+Stack: [0x000000000a3a0000,0x000000000a4a0000]
+
+Current CompileTask:
+C2:  23828  351             com.android.dx.ssa.back.SsaToRop::convertBasicBlocks (151 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000aa11800 JavaThread "pool-2-thread-4" [_thread_in_vm, id=3204, stack(0x000000000afa0000,0x000000000b0a0000)]
+  0x000000000aa11000 JavaThread "pool-2-thread-3" [_thread_in_vm, id=9996, stack(0x000000000aea0000,0x000000000afa0000)]
+  0x000000000aa0c800 JavaThread "pool-2-thread-2" [_thread_in_Java, id=3716, stack(0x000000000ada0000,0x000000000aea0000)]
+  0x000000000a917000 JavaThread "pool-3-thread-1" [_thread_blocked, id=8200, stack(0x000000000aca0000,0x000000000ada0000)]
+  0x000000000a98e800 JavaThread "pool-2-thread-1" [_thread_in_Java, id=2268, stack(0x000000000aba0000,0x000000000aca0000)]
+  0x0000000008e5a000 JavaThread "Service Thread" daemon [_thread_blocked, id=6552, stack(0x000000000a5a0000,0x000000000a6a0000)]
+  0x0000000008e47000 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=5716, stack(0x000000000a4a0000,0x000000000a5a0000)]
+=>0x0000000008e45800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=1488, stack(0x000000000a3a0000,0x000000000a4a0000)]
+  0x0000000008e44800 JavaThread "Attach Listener" daemon [_thread_blocked, id=3124, stack(0x000000000a2a0000,0x000000000a3a0000)]
+  0x0000000008e42000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7940, stack(0x000000000a1a0000,0x000000000a2a0000)]
+  0x0000000008df7800 JavaThread "Finalizer" daemon [_thread_blocked, id=10368, stack(0x000000000a0a0000,0x000000000a1a0000)]
+  0x0000000008df2000 JavaThread "Reference Handler" daemon [_thread_blocked, id=8180, stack(0x0000000009fa0000,0x000000000a0a0000)]
+  0x0000000002ea0800 JavaThread "main" [_thread_in_Java, id=6620, stack(0x0000000001310000,0x0000000001410000)]
+
+Other Threads:
+  0x0000000008df0000 VMThread [stack: 0x0000000009ea0000,0x0000000009fa0000] [id=12240]
+  0x0000000008e64000 WatcherThread [stack: 0x000000000a6a0000,0x000000000a7a0000] [id=6156]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 31744K, used 18756K [0x00000000eaa80000, 0x00000000ecb80000, 0x0000000100000000)
+  eden space 29696K, 56% used [0x00000000eaa80000,0x00000000ebad7330,0x00000000ec780000)
+  from space 2048K, 98% used [0x00000000ec780000,0x00000000ec97a048,0x00000000ec980000)
+  to   space 2048K, 0% used [0x00000000ec980000,0x00000000ec980000,0x00000000ecb80000)
+ ParOldGen       total 37376K, used 6915K [0x00000000c0000000, 0x00000000c2480000, 0x00000000eaa80000)
+  object space 37376K, 18% used [0x00000000c0000000,0x00000000c06c0cb0,0x00000000c2480000)
+ PSPermGen       total 21504K, used 5853K [0x00000000bae00000, 0x00000000bc300000, 0x00000000c0000000)
+  object space 21504K, 27% used [0x00000000bae00000,0x00000000bb3b7778,0x00000000bc300000)
+
+Card table byte_map: [0x0000000006060000,0x0000000006290000] byte_map_base: 0x0000000005a89000
+

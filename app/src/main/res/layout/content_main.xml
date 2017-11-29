@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    tools:showIn="@layout/activity_main"
+    android:background="#efefef"
+    android:fitsSystemWindows="true"
+    android:layout_below="@+id/login_toolbar"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="请输入用户名"
+        android:textColor="@color/black"
+        android:id="@+id/userName"
+        android:background="#ffffff"
+        android:padding="13dp"
+        android:textCursorDrawable="@null"
+        android:theme="@style/MyEditText"
+        android:layout_marginTop="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="请输入密码"
+        android:textColor="@color/black"
+        android:id="@+id/pwd"
+        android:layout_below="@+id/userName"
+        android:layout_alignLeft="@+id/userName"
+        android:layout_alignStart="@+id/userName"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff"
+        android:padding="13dp"
+        android:textCursorDrawable="@null"
+        android:theme="@style/MyEditText"
+        android:layout_marginTop="3dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="记住密码"
+        android:textColor="@color/black"
+        android:id="@+id/checkBox"
+        android:layout_below="@+id/pwd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:id="@+id/log"
+        android:layout_below="@+id/checkBox"
+        android:layout_centerHorizontal="true"
+        android:onClick="login"
+        android:background="@color/bar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手机登录"
+        android:id="@+id/login_tel"
+        android:layout_gravity="right"
+        android:textSize="15dp"
+        android:layout_below="@+id/log"
+        android:layout_alignEnd="@+id/log"
+        android:layout_marginTop="27dp"
+        android:singleLine="true"
+        android:textColor="@color/bar"
+        />
+</LinearLayout>

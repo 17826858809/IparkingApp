@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.context.iparking.Repair"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:backgroundTint="@color/bar"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/recharge_tool"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingTop="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="充值金额"
+            android:id="@+id/textView15"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="充100元"
+                android:id="@+id/get100"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:background="@drawable/text_shape3"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="充50元"
+                android:id="@+id/get50"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:background="@drawable/text_shape3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="充20元"
+                android:id="@+id/get20"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/text_shape3"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="充10元"
+                android:id="@+id/get10"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/text_shape3"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="押金充值 300元"
+            android:id="@+id/depo300"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:background="@drawable/text_shape3"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="充值"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:id="@+id/charge"
+            android:background="@color/bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

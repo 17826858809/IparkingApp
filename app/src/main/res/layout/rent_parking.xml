@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.project.context.iparking.RentParking">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rent_parking_all"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingTop="110dp"
+        android:paddingRight="20dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="泊车号："
+                    android:id="@+id/parking_num_text"
+                    android:textSize="25sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parking_num"
+                    android:textSize="25sp"/>
+            </TableRow>
+            <TableRow
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车位位置："
+                    android:id="@+id/parking_location_text"
+                    android:textSize="25sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parking_location"
+                    android:textSize="25sp"/>
+            </TableRow>
+            <TableRow
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="租用时间："
+                    android:id="@+id/parking_time_text"
+                    android:textSize="25sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parking_time"
+                    android:textSize="25sp"/>
+            </TableRow>
+        </TableLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="开锁"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:id="@+id/rent_parking_open"
+                android:background="@drawable/text_shape4"
+                android:layout_margin="10dp" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="报修"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:id="@+id/rent_parking_repair"
+                android:background="@drawable/text_shape4"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="取消预约"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:id="@+id/cancel"
+                android:background="@drawable/text_shape4"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车位有人占用？"
+            android:id="@+id/letter"
+            android:layout_gravity="right"
+            android:textSize="15dp"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

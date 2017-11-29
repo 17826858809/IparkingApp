@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.context.iparking.MyParking"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:backgroundTint="#333e48"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_parking_tool"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#333e48"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingTop="30dp"
+        android:paddingRight="20dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车位当日使用车辆："
+                android:textSize="25sp"
+                android:textColor="@color/black" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/table"
+                        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+                        <TableRow android:padding="10dp"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/parking_id"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/parking_sid"
+                                android:textSize="18dp"
+                                android:text="车位"
+                                android:layout_marginLeft="5dp" />
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/parking_tel"
+                                android:textSize="18dp"
+                                android:text="使用者"
+                                android:layout_marginLeft="5dp" />
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/parking_usedate"
+                                android:textSize="18dp"
+                                android:text="时间"
+                                android:layout_marginLeft="5dp" />
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/parking_usetime"
+                                android:textSize="18dp"
+                                android:text="使用时长"
+                                android:layout_marginLeft="5dp" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="开锁"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:id="@+id/my_parking_open"
+                android:background="@color/bar"
+                android:layout_margin="10dp" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="报修"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:id="@+id/my_parking_repair"
+                android:onClick=""
+                android:background="@color/bar"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车位有人占用？"
+                android:id="@+id/textView4"
+                android:layout_gravity="right"
+                android:textSize="15dp"
+                android:singleLine="true" />
+
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit"/>
+    </LinearLayout>
+
+
+</LinearLayout>

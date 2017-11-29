@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.context.iparking.Repair"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:backgroundTint="@color/bar"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/wallet_tool"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@color/back"
+        android:gravity="center_horizontal"
+        android:paddingTop="30dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的余额（元）"
+            android:id="@+id/textView7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/money"
+            android:textSize="40dp"
+            android:layout_margin="10dp"
+            android:nestedScrollingEnabled="false"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="余额说明"
+            android:id="@+id/money_say"
+            android:background="@drawable/text_shape2"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="充值"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:id="@+id/wallet_in"
+            android:background="@color/bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="2dp"
+            android:padding="3dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的用车券"
+            android:id="@+id/textView13"
+            android:textSize="17dp"
+            android:background="@color/white"
+            android:layout_marginBottom="1dp"
+            android:padding="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ticket"
+                android:textSize="17dp"
+                android:background="@color/white"
+                android:layout_marginBottom="1dp"
+                android:padding="10dp"
+                android:layout_gravity="right"
+                android:textColor="@color/colorAccent"
+                android:gravity="right" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
+        <TextView
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:text="我的押金"
+            android:id="@+id/textView14"
+            android:textSize="17dp"
+            android:background="@color/white"
+            android:layout_marginBottom="1dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"> </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/deposit"
+                android:textSize="17dp"
+                android:background="@color/white"
+                android:layout_marginBottom="1dp"
+                android:padding="10dp"
+                android:layout_gravity="right"
+                android:textColor="@color/colorAccent"
+                android:gravity="right" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

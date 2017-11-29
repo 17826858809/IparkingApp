@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.context.iparking">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 以下是使用wifi访问网络所需的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--蓝牙连接-->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!--短信验证码-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--百度-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="fdBZ6qG80GDguCePfzLvVZsd7PvRtXks" />
+
+        <activity
+            android:name=".Main2Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <activity
+            android:name=".Login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login_tel"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".RentParking"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MapsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Timer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TimeLength"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WantParking"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WantParking2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddSpace"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyHistory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ManageSpace"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Over"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OpenMySpace"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Repair"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyWallet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Recharge"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SpaceInformation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <service
+            android:name=".BluetoothLeService"
+            android:enabled="true"/>
+
+        <service
+            android:name="com.project.context.iparking.server.service.MyService"
+            android:priority="1000"
+            android:process=":background" >
+            <intent-filter>
+                <action android:name="com.project.context.iparking.server.service.MyService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.project.context.iparking.server.service.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
